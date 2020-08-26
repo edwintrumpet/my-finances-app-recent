@@ -1,0 +1,45 @@
+{
+  "name": "my-finances-app",
+  "version": "1.0.0",
+  "description": "React app to manage personal finances",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --config webpack.dev.js",
+    "prebuild": "webpack --config webpack.config.js",
+    "build": "webpack --config webpack.prod.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edwintrumpet/my-finances-app.git"
+  },
+  "keywords": [
+    "react",
+    "github actions",
+    "webpack",
+    "material ui",
+    "finances"
+  ],
+  "author": "Edwin García <spark.com.co@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/edwintrumpet/my-finances-app/issues"
+  },
+  "homepage": "https://github.com/edwintrumpet/my-finances-app#readme",
+  "devDependencies": {
+    "@babel/core": "7.11.4",
+    "@babel/plugin-transform-runtime": "7.11.0",
+    "@babel/preset-env": "7.11.0",
+    "@babel/preset-react": "7.10.4",
+    "babel-loader": "8.1.0",
+    "html-webpack-plugin": "4.3.0",
+    "webpack": "4.44.1",
+    "webpack-cli": "3.3.12",
+    "webpack-dev-server": "3.11.0"
+  },
+  "dependencies": {
+    "@babel/runtime": "7.11.2",
+    "react": "16.13.1",
+    "react-dom": "16.13.1"
+  }
+}
