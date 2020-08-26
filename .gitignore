@@ -1,0 +1,9 @@
+# React
+node_modules
+dist
+
+# Webpack
+modules-manifest.json
+
+# MacOs
+.DS_Store
