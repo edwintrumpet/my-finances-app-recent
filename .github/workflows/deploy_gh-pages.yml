@@ -26,5 +26,7 @@ jobs:
         run: npm i
       - name: Build
         run: npm run build
+        env:
+          APP_NAME: ${{ secrets.APP_NAME }}
       - name: Deploy
         run: npm run deploy:qa -- -r git@github.com:edwintrumpet/my-finances-app

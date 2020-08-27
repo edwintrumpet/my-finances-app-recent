@@ -17,6 +17,8 @@ jobs:
         run: npm run prebuild
       - name: Build
         run: npm run build
+        env:
+          APP_NAME: ${{ secrets.APP_NAME }}
       - name: Deploy to S3
         uses: jakejarvis/s3-sync-action@master
         with:
