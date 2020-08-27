@@ -5,5 +5,9 @@ dist
 # Webpack
 modules-manifest.json
 
+# Environment
+.env
+.env.dev
+
 # MacOs
 .DS_Store

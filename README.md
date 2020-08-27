@@ -20,6 +20,7 @@ Scripts
 To work in this project with the previous scripts execute the following instructions
 
 - Install dependencies
+- Create `.env.dev` file as `.env.example` file with the corresponding values
 - Run app in develop mode
 
 ## Deploy
@@ -34,6 +35,7 @@ To deploy app in production make a pull request to the master branch.
 To get production static files
 
 - Install dependencies
+- Create `.env` file as `.env.example` file with the corresponding values
 - Prepare global dependencies to production
 - Build static files to production
 
