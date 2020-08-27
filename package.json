@@ -7,6 +7,7 @@
     "start": "webpack-dev-server --config webpack.dev.js",
     "prebuild": "webpack --config webpack.config.js",
     "build": "webpack --config webpack.prod.js",
+    "deploy:qa": "gh-pages -d ./dist -b gh-pages",
     "lint": "eslint ./src/",
     "lint:fix": "eslint ./src/ --fix",
     "test": "echo \"Error: no test specified\" && exit 0"
@@ -40,6 +41,7 @@
     "eslint-plugin-jsx-a11y": "6.3.1",
     "eslint-plugin-react": "7.20.6",
     "eslint-plugin-react-hooks": "4.1.0",
+    "gh-pages": "3.1.0",
     "html-webpack-plugin": "4.3.0",
     "webpack": "4.44.1",
     "webpack-cli": "3.3.12",

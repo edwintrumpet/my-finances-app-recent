@@ -1,0 +1,30 @@
+name: Deploy to gh-pages
+
+on:
+  push:
+    branches:
+      - staging
+
+jobs:
+  deploy-to-gh-pages:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          ref: staging
+      - name: Use SSH key
+        run: |
+          mkdir -p ~/.ssh/
+          echo "${{ secrets.PERSONAL_ACCESS_TOKEN }}" > ~/.ssh/id_rsa
+          sudo chmod 600 ~/.ssh/id_rsa
+      - name: Git user config
+        run: |
+          git config --global user.email "${{ secrets.EMAIL }}"
+          git config --global user.name "${{ secrets.USERNAME }}"
+      - name: Install
+        run: npm i
+      - name: Build
+        run: npm run build
+      - name: Deploy
+        run: npm run deploy:qa -- -r git@github.com:edwintrumpet/my-finances-app
