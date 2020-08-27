@@ -24,9 +24,11 @@ jobs:
           git config --global user.name "${{ secrets.USERNAME }}"
       - name: Install
         run: npm i
+      - name: Create .env
+        run: |
+          touch .env
+          echo ENGINE_ENV=${{ secrets.ENGINE_ENV }} >> .env
       - name: Build
         run: npm run build
-        env:
-          APP_NAME: ${{ secrets.APP_NAME }}
       - name: Deploy
         run: npm run deploy:qa -- -r git@github.com:edwintrumpet/my-finances-app

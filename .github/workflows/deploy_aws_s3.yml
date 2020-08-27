@@ -15,6 +15,10 @@ jobs:
         run: npm i
       - name: Prepare dependencies
         run: npm run prebuild
+      - name: Create .env
+        run: |
+          touch .env
+          echo ENGINE_ENV=${{ secrets.ENGINE_ENV }} >> .env
       - name: Build
         run: npm run build
         env:
