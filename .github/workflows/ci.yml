@@ -3,8 +3,6 @@ name: Check lint and run tests
 on:
   pull_request:
     branches:
-      - master
-      - staging
       - develop
 
 jobs:
