@@ -6,7 +6,7 @@ export default function App() {
     <h1>
       {config.appName}
       {' '}
-      works!
+      prueba!
     </h1>
   );
 }
